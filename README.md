@@ -17,3 +17,10 @@ ssh -vvv -i ~/aws/aws_keys/default_ec2.cer ec2-user@54.236.169.223
 ```text
 ansible all -a "whoami" (inside "" could be any other command e.g. "python --version, uname, pwd, etc.")
 ```
+
+## Run commands for spesific host/group
+
+```text
+ansible dev -a "whoami" - 'dev' is a group name from hosts file
+ansible qa1 -a "whoami" - 'qa1' is a specific server from hosts file
+```
