@@ -12,3 +12,6 @@ qa1
 [groupOfGroups:children]
 qa
 dev
+
+[devSubset]
+dev[1:2] # get servers from dev group from 1 to 2
