@@ -1,0 +1,9 @@
+---
+- hosts: qa
+  tasks:
+    - name: Execute Shell commands
+      shell: uname
+      # register shell comand output variable
+      register: uname_result
+    # print result of shell command execution
+    - debug: msg="{{ uname_result }}"

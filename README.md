@@ -24,3 +24,9 @@ ansible all -a "whoami" (inside "" could be any other command e.g. "python --ver
 ansible dev -a "whoami" - 'dev' is a group name from hosts file
 ansible qa1 -a "whoami" - 'qa1' is a specific server from hosts file
 ```
+
+## Run ansible playbook
+
+```text
+ansible-playbook playbooks/playbook-file-name.yaml
+```
