@@ -1,7 +1,10 @@
 ---
 - hosts: dev
-  vars:
-    variable1: 'test variable'
+  vars_files:
+    - variables.yaml
+  # variables priority: 1. command line; 2. file; 3. vars section
+  # vars:
+  #  variable1: 'test variable'
   tasks:
     - name: Print variable
       debug: msg="Variable value is -  {{ variable1 }}"
