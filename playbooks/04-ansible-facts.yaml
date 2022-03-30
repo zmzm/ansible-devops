@@ -1,0 +1,9 @@
+---
+- hosts: qa
+  tasks:
+    - name: Some facts which ansible gathering during work
+      debug:
+        msg:
+          - "ansible_kernel: {{ ansible_kernel }}"
+          - "ansible_architecture: {{ ansible_architecture }}"
+          - "ansible_hostname: {{ ansible_hostname }}"
