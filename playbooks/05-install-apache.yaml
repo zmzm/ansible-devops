@@ -1,0 +1,16 @@
+---
+- hosts: dev
+  # Kinda sudo
+  become: true
+  tasks:
+    - name: Install apache
+      yum:
+        name: httpd
+        state: present
+    - name: Start apache service
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+    - name: Create index.html file
+      raw: "echo Welcome to my server!!!!!! | sudo tee /var/www/html/index.html"
