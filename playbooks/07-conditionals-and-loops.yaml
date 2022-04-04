@@ -16,3 +16,9 @@
         - item1
         - item2
         - item3
+    - name: Use ansible loop with complex data
+      debug: var=item
+      with_items:
+      - { brand: BMW, model: E39 }
+      - { brand: AUDI, model: RS6 }
+      - { brand: Mercedes, model: CLK }
