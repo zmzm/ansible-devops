@@ -10,3 +10,9 @@
           - "ansible_architecture: {{ ansible_architecture }}"
           - "ansible_hostname: {{ ansible_hostname }}"
       when: system == "Linux"
+    - name: Use ansible loop
+      debug: var=item
+      with_items:
+        - item1
+        - item2
+        - item3
