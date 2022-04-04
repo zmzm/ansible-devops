@@ -1,0 +1,12 @@
+---
+- hosts: qa
+  vars:
+    system: "Linux"
+  tasks:
+    - name: Print facts by condition
+      debug:
+        msg:
+          - "ansible_kernel: {{ ansible_kernel }}"
+          - "ansible_architecture: {{ ansible_architecture }}"
+          - "ansible_hostname: {{ ansible_hostname }}"
+      when: system == "Linux"
