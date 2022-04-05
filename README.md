@@ -30,3 +30,17 @@ ansible qa1 -a "whoami" - 'qa1' is a specific server from hosts file
 ```text
 ansible-playbook playbooks/playbook-file-name.yaml
 ```
+
+## Dynamic ansible inventory
+
+### Preparation
+
+```text
+Create python venv, install boto3, export aws access key/secret access key
+```
+
+### Test
+
+```text
+ansible-inventory --list 
+```
