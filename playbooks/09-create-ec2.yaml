@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  tasks:
+    - ec2:
+      key_name: default_ec2
