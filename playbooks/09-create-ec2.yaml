@@ -1,7 +1,8 @@
 ---
 - hosts: localhost
   tasks:
-    - ec2_instance:
+    - name: Create ec2 instance
+      ec2_instance:
         key_name: default_ec2
         instance_type: t2.micro
         image_id: ami-0c02fb55956c7d316

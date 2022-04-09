@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Stop all ec2 instances
+      ec2_instance:
+        region: us-east-1
+        state: stopped
+        filters:
+          instance-state-name: running
